@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  streamlit-app:
+    build: .
+    container_name: streamlit-app
+    ports:
+      - "3000:8501"
+    depends_on:
+      - ollama
+    networks:
+      - app-network
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11435:11434"  # default Ollama port
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - app-network
+
+networks:
+  app-network:
+
+volumes:
+  ollama-data:

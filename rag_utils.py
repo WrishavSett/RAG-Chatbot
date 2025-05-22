@@ -45,7 +45,7 @@ def chunk_text(text, max_tokens=500):
 # --- 🔄 LOCAL EMBEDDING VIA OLLAMA ---
 def get_embedding(text: str, model: str = "nomic-embed-text") -> List[float]:
     response = requests.post(
-        "http://localhost:11434/api/embeddings",
+        "http://ollama:11434/api/embeddings",
         json={"model": model, "prompt": text}
     )
     if response.status_code == 200:
