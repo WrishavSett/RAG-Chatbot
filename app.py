@@ -15,7 +15,8 @@ with st.sidebar:
     )
     if st.button("New Chat"):
         st.session_state["messages"] = []
-        st.experimental_rerun()
+        # st.experimental_rerun()
+        st.rerun() # experimental_rerun() -> rerun() in newer Streamlit versions
 
 # Chat section scrollable
 chat_container = st.container()
