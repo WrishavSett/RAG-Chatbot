@@ -57,9 +57,9 @@ multidict==6.4.3
 mypy_extensions==1.1.0
 narwhals==1.38.0
 nest-asyncio==1.6.0
-networkx==3.4.2
+networkx
 nltk==3.9.1
-numpy==2.2.5
+numpy
 ollama==0.4.8
 packaging==24.2
 pandas==2.2.3
